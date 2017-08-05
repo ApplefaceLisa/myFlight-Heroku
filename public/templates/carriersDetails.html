@@ -1,0 +1,20 @@
+<div id="todoPanel" class="panel">
+    <h1 class="panel-header">{{carrierName}} Flights List</h1>
+    <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>Index</th>
+            <th>File Name</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr ng-repeat="item in flightDtls">
+            <td>{{$index+1}}</td>
+            <td>{{item.name}}.json</td>
+            <td><a ng-href="#!/viewFlights/{{carrierName}}/{{item.name}}">{{item.name}}</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
